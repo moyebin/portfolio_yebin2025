@@ -1,0 +1,1042 @@
+:root {
+    --point-pink: #ef7d94;
+    --point-blue: #82c3ec;
+    --point-green: #8da38b;
+    --title: #425a73;
+    --text: #333;
+    --line: #cfd6df;
+    --bg-soft: linear-gradient(#f6bbcf7e, #b9dcf37c, #bbdbb677);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--text);
+    background: #fff;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+.inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    z-index: 100;
+}
+
+.nav_wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.gnb {
+    display: flex;
+    gap: 40px;
+}
+
+.gnb a {
+    font-weight: 600;
+    font: size 16px;
+    px;
+    color: #425a73;
+    transition: 0.3s;
+}
+
+.gnb a:hover {
+    color: #ef7d94;
+}
+
+
+/* =========================
+   TOP BUTTON
+========================= */
+#top_btn {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    width: 68px;
+    height: 68px;
+    border: 1px solid var(--point-pink);
+    background: #fff;
+    color: #333;
+    border-radius: 50%;
+    box-shadow: 4px 4px 0 #ff8ea8;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+    transition: .25s ease;
+}
+
+#top_btn:hover {
+    background-color: var(--point-pink);
+    color: #fff;
+}
+
+/* =========================
+   INTRO
+========================= */
+#intro {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(90deg,
+            #efb4c7,
+            #c5d8ea,
+            #bfd8bd);
+}
+
+.intro_text {
+    z-index: 10;
+}
+
+.job {
+    letter-spacing: 4px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #425a73;
+}
+
+.intro_text h2 {
+    font-size: 80px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #425a73;
+}
+
+.desc {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #425a73;
+}
+
+.scroll {
+    margin-top: 40px;
+    font-size: 14px;
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(10px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+.heart_wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.heart {
+    position: absolute;
+    width: 150px;
+    animation: float 4s infinite ease-in-out;
+}
+
+.h1 {
+    left: 18%;
+    top: 20%;
+}
+
+.h2 {
+    left: 45%;
+    top: 70%;
+}
+
+.h3 {
+    right: 18%;
+    top: 18%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-20px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+/* =========================
+   COMMON SECTION TITLE
+========================= */
+.about_title h2,
+.skill_title h2,
+.work_title h2,
+.project_title h2,
+.contact-section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--title);
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about-section {
+    padding: 50px 0 60px;
+}
+
+.about_title h2 {
+    max-width: 1180px;
+    margin: 0 auto 50px;
+}
+
+.about_box {
+    display: grid;
+    grid-template-columns: 420px minmax(520px, 1fr);
+    align-items: center;
+    gap: 80px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* 왼쪽 사진 카드 */
+.about_bg {
+    position: relative;
+    flex: 0 0 380px;
+    height: 340px;
+    border-radius: 48px;
+    background: linear-gradient(180deg, #f4d9e5 0%, #d8e6ef 52%, #d9e6d8 100%);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08),
+        0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about_bg .about_img {
+    position: absolute;
+    left: 50%;
+    top: 42px;
+    transform: translateX(-50%);
+    width: 210px;
+    height: 260px;
+    border-radius: 28px;
+    object-fit: cover;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.about_bg a {
+    position: absolute;
+    left: 50%;
+    bottom: 13px;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    text-align: center;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #7a8da3;
+    transition: color 0.25s ease;
+}
+
+.about_bg:hover a {
+    color: #ef7d94;
+}
+
+/* 오른쪽 정보 */
+.about_txt {
+    width: 100%;
+    max-width: 620px;
+    min-width: 0;
+}
+
+.about_txt img {
+    max-width: 180px;
+    padding-bottom: 10px;
+}
+
+.about_txt span {
+    color: #7a8da3;
+    font-weight: 500;
+    margin-right: 6px;
+}
+
+.about_head span {
+    display: block;
+    margin-top: 4px;
+    font-size: 1rem;
+    color: #7d8da3;
+    font-weight: 600;
+}
+
+/* 태그 */
+.tag {
+    margin-top: 24px;
+}
+
+.tag_skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.tag_skill li {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.tag_skill span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background: #fff;
+}
+
+.tag_skill .pro1 {
+    box-shadow: 0 0 0 1px rgba(239, 125, 148, 0.4), 0 6px 14px rgba(239, 125, 148, 0.10);
+}
+
+.tag_skill .pro2 {
+    box-shadow: 0 0 0 1px rgba(130, 195, 236, 0.45), 0 6px 14px rgba(130, 195, 236, 0.12);
+}
+
+.tag_skill .pro3 {
+    box-shadow: 0 0 0 1px rgba(141, 163, 139, 0.45), 0 6px 14px rgba(141, 163, 139, 0.12);
+}
+
+/* =========================
+   SKILL
+========================= */
+.skill-section {
+    padding: 50px 0 60px;
+}
+
+.skill_title {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.skill_title h2 {
+    margin-bottom: 34px;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #425a73;
+    letter-spacing: -0.02em;
+}
+
+.skils_wrap {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 28px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 30px 34px;
+    border-radius: 36px;
+    background: rgba(255, 255, 255, 0.42);
+    box-shadow: 0 10px 30px rgba(66, 90, 115, 0.06);
+}
+
+.skill_wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.skill_img {
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill_img img {
+    max-width: 44px;
+    max-height: 44px;
+    object-fit: contain;
+}
+
+.skill_info {
+    flex: 1;
+    min-width: 0;
+}
+
+.skill_label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill_label span {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #425a73;
+}
+
+.skill_label strong {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #7a8da3;
+}
+
+.skill_bg {
+    width: 100%;
+    height: 16px;
+    background: #e8e8e8;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.skill_bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.skill_bar.html {
+    background-color: #ef7d7f;
+}
+
+.skill_bar.css {
+    background-color: #7d94ef;
+}
+
+.skill_bar.js {
+    background-color: #ef9f7d;
+}
+
+.skill_bar.jq {
+    background-color: #8da38b;
+}
+
+.skill_bar.figma {
+    background-color: #ef7d94;
+}
+
+.skill_bar.github {
+    background-color: #333;
+}
+
+.skill_bar.ps {
+    background-color: #7de4ef;
+}
+
+.skill_bar.ai {
+    background-color: #fabd5b;
+}
+
+/* =========================
+   PROJECT
+========================= */
+.project-section {
+    padding: 50px 0 60px;
+}
+
+.project_title {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.project_title h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #425a73;
+}
+
+.container {
+    width: 100%;
+}
+
+/* swiper */
+.swiper {
+    width: 100%;
+    background: var(--bg-soft);
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+.projectSwiper {
+    padding-bottom: 60px;
+}
+
+/* slide */
+
+.slide-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 35px;
+}
+
+/* text */
+
+.slide-text {
+    flex: 1;
+}
+
+.slide-box h3 {
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.slide-box h3 span {
+    font-size: 1rem;
+}
+
+.slide-box p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* 이미지 */
+
+.view_img1,
+.view_img2,
+.view_img3,
+.view_img4 {
+    flex: 0 0 46%;
+    height: 360px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* 변경 */
+}
+
+.view_img1 {
+    background-image: url(../img/ptpt.png);
+}
+
+.view_img2 {
+    background-image: url(../img/zeze.png);
+}
+
+.view_img3 {
+    background-image: url(../img/jeje.png);
+}
+
+.view_img4 {
+    background-image: url(../img/cucu.png);
+}
+
+/* 버튼 */
+
+.boxboxbox {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.boxboxbox a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    height: 42px;
+    padding: 0 16px;
+    font-size: .95rem;
+    font-weight: 600;
+    color: #425a73;
+    background: #fff;
+    border: 1px solid #425a73;
+    border-radius: 10px;
+    transition: .25s;
+}
+
+.boxboxbox a:hover {
+    transform: translateY(-2px);
+}
+
+.trigger:hover {
+    background: #ff6397cb;
+}
+
+.trigger2:hover {
+    background: #82c3ec;
+}
+
+/* =========================
+   POPUP
+========================= */
+.project_bg {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background-color: rgba(0, 0, 0, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.project_bg.active {
+    display: flex;
+}
+
+.popup_inner {
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    position: relative;
+}
+
+.popup_close {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.popup_img {
+    width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 20px;
+    background: #7a8da3;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact-section {
+    padding: 50px 0 60px;
+}
+
+.inner {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.inner h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #425a73;
+}
+
+.contact_inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact_inner h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact_img {
+    width: 100%;
+    min-height: 350px;
+    border-radius: 40px;
+    background-image: url(../img/con_img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.contact_txt {
+    text-align: center;
+}
+
+.contact_txt p {
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: .2px;
+    word-break: keep-all;
+}
+
+.contact_txt strong {
+    font-weight: 600;
+}
+
+.contact_txt .p,
+.contact_txt .pp {
+    font-size: 1rem;
+}
+
+.contact_txt p+p {
+    margin-top: 10px;
+}
+
+.contact_txt .link {
+    width: 100%;
+    max-width: 394px;
+    margin: 24px auto 0;
+}
+
+.contact_txt .link a {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    font-weight: 600;
+    border: 1px solid #425a73;
+    border-radius: 10px;
+    transition: .25s ease;
+}
+
+.contact_txt .git:hover {
+    background-color: #e0a9ff;
+    color: #111;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    width: 100%;
+    background: var(--bg-soft);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+footer address {
+    font-size: .85rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    font-style: normal;
+}
+
+/* =========================
+   TABLET 1024
+========================= */
+@media (max-width:1024px) {
+
+    .inner {
+        padding: 0 40px;
+    }
+
+    /* intro */
+    .intro_text h2 {
+        font-size: 64px;
+    }
+
+    /* about */
+    .about_box {
+        grid-template-columns: 320px 1fr;
+        gap: 40px;
+    }
+
+    .about_bg {
+        height: 300px;
+    }
+
+    .about_bg .about_img {
+        width: 180px;
+        height: 220px;
+    }
+
+    /* skill */
+    .skils_wrap {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 24px;
+    }
+
+    /* project */
+    .slide-box {
+        align-items: center;
+    }
+
+    .view_img1,
+    .view_img2,
+    .view_img3,
+    .view_img4 {
+        width: 100%;
+        height: 260px;
+        margin-bottom: 20px;
+    }
+
+    /* contact */
+    .contact_inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact_img {
+        min-height: 280px;
+    }
+
+}
+
+/* =========================
+   MOBILE 768
+========================= */
+@media (max-width:768px) {
+
+    .inner {
+        padding: 0 20px;
+    }
+
+    /* nav */
+    .gnb {
+        gap: 16px;
+        font-size: 14px;
+    }
+
+    /* intro */
+    .intro_text h2 {
+        font-size: 48px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    /* heart */
+    .heart {
+        width: 100px;
+    }
+
+    /* about */
+    .about_box {
+        gap: 30px;
+    }
+
+    .about_txt img {
+        display: none;
+    }
+
+    .inner h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #425a73;
+    }
+
+    .about_txt {
+        width: 100%;
+        max-width: 620px;
+        min-width: 0;
+    }
+
+    .tag_skill {
+        justify-content: center;
+    }
+
+    /* project */
+    .slide-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .slide-text p {
+        display: none;
+    }
+
+    .view_img1,
+    .view_img2,
+    .view_img3,
+    .view_img4 {
+        display: block;
+        width: 100%;
+        height: 300px;
+        flex: none;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    /* buttons */
+    .boxboxbox {
+        justify-content: center;
+    }
+
+    /* contact */
+    .contact_txt {
+        text-align: center;
+    }
+
+    .contact_img {
+        display: none;
+    }
+}
+
+/* =========================
+   SMALL MOBILE 480
+========================= */
+@media (max-width:480px) {
+
+    .inner {
+        padding: 0 16px;
+    }
+
+    /* intro */
+
+    .intro_text h2 {
+        font-size: 36px;
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+
+    .scroll {
+        font-size: 12px;
+    }
+
+    /* hearts */
+
+    .heart {
+        width: 60px;
+    }
+
+    /* about */
+
+    .about_bg {
+        height: 260px;
+    }
+
+    .about_box{
+        grid-template-columns: 200px 1fr;
+    }
+    .about_box a{
+        font-size: .7rem;
+    }
+
+    .about_bg .about_img {
+        width: 150px;
+        height: 180px;
+    }
+
+    .about_txt {
+        font-size: 14px;
+    }
+
+    /* skill */
+
+    .skill_label span {
+        font-size: 14px;
+    }
+
+    .skill_label strong {
+        font-size: 13px;
+    }
+
+    .skill_bg {
+        height: 12px;
+    }
+
+    /* project */
+
+    .slide-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 16px;
+    }
+
+    /* 컴퓨터 이미지 위로 */
+    .view_img1,
+    .view_img2,
+    .view_img3,
+    .view_img4 {
+        order: -1;
+        width: 100%;
+        height: 240px;
+        margin-bottom: 18px;
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* 제목 */
+    .slide-box h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    /* 설명 */
+    .slide-box p {
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
+
+    /* 버튼 */
+
+    .boxboxbox {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* contact */
+
+    .contact_img {
+        min-height: 200px;
+    }
+
+    .contact_txt p {
+        font-size: 0.8rem;
+    }
+
+}
